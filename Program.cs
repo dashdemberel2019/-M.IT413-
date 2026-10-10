@@ -56,7 +56,16 @@ class MainWindow : Window                           // Үндсэн цонхны
         button1.Click += Button1_Click;                             // Дарахад Button1_Click метод дуудагдана
 
         // "Гарах" товч: тод фонт, цагаан дэвсгэр, цэнхэр хүрээ ба текст
-        var clse = new Button { Content = "Гарах уу", Width = 100, FontSize = 16, FontWeight = FontWeight.Bold, Background = Brushes.White, BorderBrush = Brushes.Blue, Foreground = Brushes.Blue };
+        var clse = new Button
+        {
+            Content = "Гарах",
+            Width = 100,
+            FontSize = 16,
+            FontWeight = FontWeight.Bold,
+            Background = Brushes.White,
+            BorderBrush = Brushes.Blue,
+            Foreground = Brushes.Blue
+        };
         Canvas.SetLeft(clse, 50); Canvas.SetTop(clse, 200);         // (50, 200)-д байрлуулах
         clse.Click += (s, e) => Close();                           // Дарахад цонхыг хаах (lambda илэрхийлэл)
 
@@ -64,28 +73,28 @@ class MainWindow : Window                           // Үндсэн цонхны
         Canvas.SetLeft(resultLabel, 50); Canvas.SetTop(resultLabel, 160); // (50, 160)-д байрлуулах
 
         canvas.Children.Add(textBox1);              // textBox1-ийг canvas-д нэмэх
-        canvas.Children.Add(textBox2);              
-        canvas.Children.Add(button);                
-        canvas.Children.Add(button1);               
-        canvas.Children.Add(clse);                  
-        canvas.Children.Add(resultLabel);           
+        canvas.Children.Add(textBox2);
+        canvas.Children.Add(button);
+        canvas.Children.Add(button1);
+        canvas.Children.Add(clse);
+        canvas.Children.Add(resultLabel);
 
         Content = canvas;                           // Canvas-ийг цонхны агуулга болгож тохируулах
     }
 
     private void Button1_Click(object sender, RoutedEventArgs e) // "-" товч дарахад ажиллах метод
     {
-        int a = int.Parse(textBox1.Text);           
-        int b = int.Parse(textBox2.Text);           
-        int sum = a - b;                            
-        resultLabel.Text = sum.ToString();          
+        int a = int.Parse(textBox1.Text);
+        int b = int.Parse(textBox2.Text);
+        int sum = a - b;
+        resultLabel.Text = sum.ToString();
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)  // "+" товч дарахад ажиллах метод
     {
-        int a = int.Parse(textBox1.Text);           
-        int b = int.Parse(textBox2.Text);           
-        int sum = a + b;                            
-        resultLabel.Text = sum.ToString();          
+        int a = int.Parse(textBox1.Text);
+        int b = int.Parse(textBox2.Text);
+        int sum = a + b;
+        resultLabel.Text = sum.ToString();
     }
 }
