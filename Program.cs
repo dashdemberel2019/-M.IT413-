@@ -58,7 +58,7 @@ class MainWindow : Window                           // Үндсэн цонхны
         // "Гарах" товч: тод фонт, цагаан дэвсгэр, цэнхэр хүрээ ба текст
         var clse = new Button
         {
-            Content = "Гарах",
+            Content = "Гарах уу",
             Width = 100,
             FontSize = 16,
             FontWeight = FontWeight.Bold,
